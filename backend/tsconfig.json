@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",   // Use ESNext or ES6 for ES module output
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "esModuleInterop": true, // Allows default imports from CommonJS modules
+    "skipLibCheck": true,    // Skip type checking of all declaration files (*.d.ts)
+    "forceConsistentCasingInFileNames": true,
+    "strict": true          // Enable all strict type-checking options
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
