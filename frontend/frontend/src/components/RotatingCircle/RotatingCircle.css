@@ -1,0 +1,35 @@
+/* components/RotatingCircle.css */
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #000; Background color */
+}
+
+.circle {
+    position: absolute;
+    width: 450px; /* Main circle diameter */
+    height: 450px;
+    border-radius: 50%;
+    background-image: url('/public/gradient.png'); /* Color of the sun */
+    background-size: cover; /* Make the image cover the circle */
+    /* background-position: center; Center the image */
+    bottom: 50%;
+    left: 350%; 
+    z-index: 2; /* Ensure it's on top */
+}
+
+.a {
+    width: 60px; /* Planet diameter */
+    height: 60px; /* Planet diameter */
+    border-radius: 50%;
+    /* background-color: rgb(242, 146, 192); Color of the planets */
+    background-image: url('/public/gradient.png');
+    z-index: 2; /* Behind the main circle */
+    left : -100%;
+    top : 1000;
+}
+

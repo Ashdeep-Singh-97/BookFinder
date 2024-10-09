@@ -25,8 +25,8 @@ export default function Bar({ sendDataToParent }: BarProps) {
             onChange={updateQuery}
             type="search"
             id="default-search"
-            className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Search Mockups, Logos..."
+            className="block w-full p-4 text-xl text-gray-900 border border-brown-600 rounded-lg bg-gradient-to-r from-brown-200 to-brown-100 placeholder:text-gray-700 focus:ring-4 focus:outline-none focus:ring-brown-300 transition duration-300 "
+            placeholder="Search Your books...."
             required
         />
     );

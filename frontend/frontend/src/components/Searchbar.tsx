@@ -1,5 +1,7 @@
 import { useState, useCallback } from "react";
 import Bar from "./Bar";
+import { gsap } from "gsap";
+import { useGSAP } from '@gsap/react';
 
 interface SearchBarProps {
     sendDataToParent: (data: any) => void;
@@ -35,14 +37,18 @@ export default function Searchbar({ sendDataToParent, setLoading }: SearchBarPro
         }
     }, [query, sendDataToParent, setLoading]);
 
+    useGSAP(() => {
+        gsap.to('.title', { opacity: 1, y: -10, delay: 1 });
+    }, []);
+
     return (
-        <div className="grid grid-cols-8 gap-4 mt-32 mb-16 pb-16">
+        <div style={{ opacity: 0 }} className="title grid grid-cols-8 gap-4 mt-32 mb-16 pb-16">
             <div className="col-span-3 col-start-3">
                 <Bar sendDataToParent={(data: string) => setQuery(data)} />
             </div>
             <div className="content-center">
                 <button
-                    className="text-white hover:bg-gradient-to-l hover:cursor-pointer font-medium text-sm px-5 py-2.5 text-center rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 mt-4"
+                    className="text-white font-medium text-xl px-5 py-2.5 text-center rounded-lg bg-gradient-to-r from-brown-500 via-brown-400 to-brown-300 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-brown-300 dark:focus:ring-brown-800 mt-4 transition"
                     onClick={fetchData}
                 >
                     Search

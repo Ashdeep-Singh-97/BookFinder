@@ -1,0 +1,19 @@
+.page-background {
+    position: relative; /* Position relative for absolute child elements */
+    overflow: hidden; /* Prevent overflow of pseudo-elements */
+}
+
+.page-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/library.jpeg');
+    background-size: cover; /* Adjust background size */
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-position: center;
+    opacity: 0.80; /* Adjust transparency here */
+    z-index: 0; /* Ensure it stays behind other content */
+}

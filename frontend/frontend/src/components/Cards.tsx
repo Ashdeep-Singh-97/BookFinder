@@ -13,24 +13,30 @@ interface CardsProps {
 export default function Cards({ item }: CardsProps) {
   const { title, description, pageCount, buyLink } = item;
 
-  // Function to truncate description to 20 characters
+  // Function to truncate description to 50 characters
   const getDescription = (desc: string) => {
-    if (!desc) return 'Description : Not Found';
+    if (!desc) return 'Description: Not Found';
     return desc.length > 50 ? `${desc.slice(0, 50)}...` : desc;
   };
 
   return (
-    <div className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+    <div className="bg-white border border-brown-300 dark:border-brown-700 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 transform hover:shadow-xl hover:scale-105">
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">{title || 'Not Found'}</h3>
-        <p className="text-sm mb-2 text-gray-600 dark:text-gray-400">{getDescription(description)}</p>
-        <p className="text-sm mb-2 text-gray-600 dark:text-gray-400">Page Count: {pageCount || 'Not Found'}</p>
+        <h3 className="text-2xl font-bold mb-2 text-gray-800 hover:text-brown-600 dark:hover:text-brown-400 transition duration-200">
+          {title || 'Not Found'}
+        </h3>
+        <p className="text-xl mb-4 text-gray-800 ">
+          {getDescription(description)}
+        </p>
+        <p className="text-xl mb-4 text-gray-800 ">
+          Page Count: {pageCount || 'Not Found'}
+        </p>
         {buyLink ? (
           <a 
             href={buyLink} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="text-blue-600 dark:text-blue-400 hover:underline text-sm"
+            className="inline-block text-brown-600 dark:text-brown-400 hover:underline text-xl font-extrabold transition duration-200"
           >
             Buy Link
           </a>

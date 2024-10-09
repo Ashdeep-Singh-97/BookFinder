@@ -1,4 +1,3 @@
-// src/SideDrawer.tsx
 import React, { useState } from 'react';
 
 interface SideDrawerProps {
@@ -24,9 +23,9 @@ const SideDrawer: React.FC<SideDrawerProps> = ({ sendDataToParent, isOpen, onClo
         />
       )}
       <div
-        className={`fixed top-0 left-0 h-full bg-gray-800 text-white w-64 transform ${
+        className={`fixed top-0 left-0 h-full bg-gradient-to-r from-brown-600 via-brown-500 to-brown-400 text-white w-64 transform ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
-        } transition-transform duration-300 ease-in-out z-50`}
+        } transition-transform duration-300 ease-in-out z-50 shadow-lg`}
       >
         <button
           className="absolute top-4 right-4 text-white text-2xl"
@@ -36,16 +35,16 @@ const SideDrawer: React.FC<SideDrawerProps> = ({ sendDataToParent, isOpen, onClo
         </button>
         <nav className="mt-12 px-4">
           <ul>
-            <li className="px-4 py-2 hover:bg-gray-700">
+            <li className="px-4 py-2 hover:bg-brown-700 transition rounded">
               <a href="#home">Home</a>
             </li>
-            <li className="px-4 py-2 hover:bg-gray-700">
+            <li className="px-4 py-2 hover:bg-brown-700 transition rounded">
               <a href="#about">About</a>
             </li>
-            <li className="px-4 py-2 hover:bg-gray-700">
+            <li className="px-4 py-2 hover:bg-brown-700 transition rounded">
               <a href="#services">Services</a>
             </li>
-            <li className="px-4 py-2 hover:bg-gray-700">
+            <li className="px-4 py-2 hover:bg-brown-700 transition rounded">
               <a href="#contact">Contact</a>
             </li>
           </ul>
@@ -60,7 +59,7 @@ const SideDrawer: React.FC<SideDrawerProps> = ({ sendDataToParent, isOpen, onClo
               max="999"
               value={filterValue}
               onChange={handleFilterChange}
-              className="w-full"
+              className="w-full accent-brown-500" // Custom accent color for the range input
             />
           </div>
         </div>
