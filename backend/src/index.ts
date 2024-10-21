@@ -4,7 +4,7 @@ import cors from 'cors';
 dotenv.config();
 
 // Testing CI
-// part 4
+// part 6
 
 const app = express();
 
