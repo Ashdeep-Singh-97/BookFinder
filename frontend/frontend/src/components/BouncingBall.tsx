@@ -25,7 +25,7 @@ const BouncingBall: React.FC = () => {
         <div>
             <img 
                 ref={ballRef} 
-                src="/public/Rocket.png" 
+                src="/Rocket.png" 
                 alt="Bouncing Ball" 
                 style={{ position: 'absolute', left: '50%', bottom: '20px', width: '150px', height: '150px' }} 
             />
