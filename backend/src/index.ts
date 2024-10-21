@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 dotenv.config();
 
-// Testing CI
+// Testing CI part 2
 
 const app = express();
 
