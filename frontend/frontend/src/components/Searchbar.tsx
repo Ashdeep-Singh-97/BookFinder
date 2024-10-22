@@ -15,7 +15,7 @@ export default function Searchbar({ sendDataToParent, setLoading }: SearchBarPro
         if (query.trim() === '') return; // Do not fetch if query is empty
         setLoading(true); // Set loading to true when starting to fetch data
         try {
-            const response = await fetch('http://localhost:5000/', {
+            const response = await fetch('https://book-finder-hlam.vercel.app/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
