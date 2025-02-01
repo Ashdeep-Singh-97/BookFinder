@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import AckeeTracker from "ackee-tracker";
+import * as AckeeTracker from "ackee-tracker";
 import Page from "./components/Page";
 import BouncingBall from "./components/BouncingBall";
 
