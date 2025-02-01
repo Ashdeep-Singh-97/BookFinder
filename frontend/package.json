@@ -7,5 +7,11 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "ackee-tracker": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/ackee-tracker": "^5.0.4"
+  }
 }
