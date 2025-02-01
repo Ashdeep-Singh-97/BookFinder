@@ -10,7 +10,7 @@ const RouteTracker = () => {
   
   useEffect(() => {
     const instance = AckeeTracker.create('http://localhost:3002', { detailed: true });
-    instance.record('5579a14e-b091-405d-b764-e15695e7e704'); // Replace with your actual Domain ID from Ackee
+    instance.record('7cceafa0-ca7c-43df-94a3-2041bba8857d'); // Replace with your actual Domain ID from Ackee
   }, [location]); // Track whenever the route changes
 
   return null; // This component does not render anything
